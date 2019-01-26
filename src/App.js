@@ -10,7 +10,7 @@ class App extends Component {
       {
         id: 1,
         title: 'take out the trash',
-        completed: true
+        completed: false
       },
       {
         id: 2,
@@ -34,12 +34,19 @@ class App extends Component {
     })});
   }
 
+  // delete todo
+  deleteTodo = (_id) => {
+    this.setState({todos: [...this.state.todos.filter(todo => todo.id !== _id)]});
+  }
+
   render() {
     
     return (
       <div className="App">
         {/* this was declared in the Component's state */}
-        <Todos todos={this.state.todos} markComplete={this.markComplete} />
+        <Todos todos={this.state.todos} 
+               markComplete={this.markComplete}
+               deleteTodo={this.deleteTodo} />
       </div>
     );
   }

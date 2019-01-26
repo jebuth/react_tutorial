@@ -9,7 +9,10 @@ class Todos extends Component {
     // but here it is a prop. it will be passed as a prop
     // to TodoItem and will be a prop in TodoItem
     return this.props.todos.map((todo) => (
-      <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete} />
+      <TodoItem key={todo.id} 
+                todo={todo} 
+                markComplete={this.props.markComplete}
+                deleteTodo={this.props.deleteTodo}/>
     ));
   }
 }

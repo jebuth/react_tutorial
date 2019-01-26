@@ -24,10 +24,21 @@ export class TodoItem extends Component {
             {/* this is passed from Todo component as a prop and 
                 received here as a prop. it is only a state of the parent component. */}
             {title}
+            <button style={btnStyle} onClick={this.props.deleteTodo.bind(this, id)}>x</button>
           </p>
       </div>
     )
   }
+}
+
+const btnStyle = {
+  background: '#ff0000',
+  color: '#fff',
+  border: 'none',
+  padding: '5px 9px',
+  borderRadius: '50%',
+  cursor: 'pointer',
+  float: 'right'
 }
 
 // Prop-types (good practice?)
