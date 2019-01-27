@@ -2,11 +2,12 @@ import React from 'react'
 
 function About() {
   return (
-    <div>
-      
-    </div>
+    <React.Fragment>
+      <h1>About</h1>
+      <p>this is the TodoList app v1.0.0. It is part of a React crash course.</p>
+    </React.Fragment>
   )
 }
 
 
-export default About()
+export default About;
